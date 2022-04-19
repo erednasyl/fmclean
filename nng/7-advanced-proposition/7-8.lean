@@ -1,0 +1,28 @@
+lemma and_or_distrib_left (P Q R : Prop) : P ∧ (Q ∨ R) ↔ (P ∧ Q) ∨ (P ∧ R) :=
+
+begin
+  split,
+  intro pqr,
+  cases pqr with p qr,
+  cases qr with q r,
+  left,
+  split,
+  exact p,
+  exact q,
+  right,
+  split,
+  exact p,
+  exact r,
+  intro pqpr,
+  cases pqpr,
+  cases pqpr with p q,
+  split,
+  exact p,
+  left,
+  exact q,
+  cases pqpr with p r,
+  split,
+  exact p,
+  right,
+  exact r,
+end

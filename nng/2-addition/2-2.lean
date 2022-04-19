@@ -1,0 +1,6 @@
+induction c with k hk,
+rw add_zero,
+refl,
+rw add_succ,
+rw hk,
+refl,
